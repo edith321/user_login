@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/newPage', ['middleware' => ['auth'], 'uses' => 'ImageController@index']);
+Route::get('/newPage', ['middleware' => ['auth', 'age-restriction'], 'uses' => 'ImageController@index']);
 
 
 Auth::routes();
